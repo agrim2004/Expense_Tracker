@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #00ff88;
+  --primary-dark: #00cc6a;
+  --bg-dark: #0a1118;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+  --danger: #ff4d4d;
+  --success: #00ff88;
+  --font-main: 'Outfit', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 136, 0.03), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.03), transparent 30%),
+    linear-gradient(
+      135deg,
+      #0b1120 0%,
+      #111827 50%,
+      #1e293b 100%
+    );
+
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1rem;
+  zoom: 1.1;
+}
+
+/* Logo Animation */
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: floatLogo 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.35));
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(0, 255, 136, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3rem !important;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+h2 {
+  font-size: 1.5rem !important;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  }
+
+  to {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  }
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  transition: var(--transition);
+  min-height: 52px;
+  font-size: 1rem;
+}
+
+/* Inputs */
+input,
+select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: white;
+  padding: 1rem 1.1rem;
+  font-size: 1rem;
+  min-height: 52px;
+  font-family: var(--font-main);
+  outline: none;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.08);
+}
+
+/* Dropdown Options */
+select option {
+  background-color: white;
+  color: black;
+}
+
+/* Dashboard Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  #root {
+    padding: 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+  }
+}
+.logo {
+  width: 75px !important;
+  height: 75px !important;
+  object-fit: contain;
+
+  animation: rotateLogo 3s linear infinite;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Bigger overall scaling */
+html {
+  font-size: 18px;
+}
+
+/* Wider layout */
+.container {
+  max-width: 1700px !important;
+  padding: 2rem !important;
+}
+
+/* Bigger cards */
+.glass-card {
+  padding: 2.5rem !important;
+  border-radius: 24px !important;
+}
+
+/* Bigger headings */
+h1 {
+  font-size: 3.5rem !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+}
+
+/* Bigger inputs */
+input,
+select {
+  min-height: 60px !important;
+  font-size: 1.05rem !important;
+  padding: 1rem 1.2rem !important;
+}
+
+/* Bigger buttons */
+button {
+  min-height: 60px !important;
+  font-size: 1.05rem !important;
+  padding: 0 1.5rem !important;
+}
+
+/* Bigger spacing between sections */
+.dashboard-grid {
+  gap: 2.5rem !important;
+}
+
+/* Bigger logo */
+.logo {
+  width: 85px !important;
+  height: 85px !important;
+}
+
+/* Better sharpness */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
