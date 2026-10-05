@@ -19,9 +19,9 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/expense_tr
 
 // Middlewares
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: true,
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
