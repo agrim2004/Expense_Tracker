@@ -52,13 +52,13 @@ body {
   max-width: 1450px;
   margin: 0 auto;
   padding: 1rem;
-  zoom: 1.1;
+  zoom: 1;
 }
 
 /* Logo Animation */
 .logo {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   object-fit: contain;
   animation: floatLogo 3s ease-in-out infinite;
   filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.35));
@@ -201,6 +201,8 @@ select option {
     font-size: 2.2rem !important;
   }
 }
+
+/* Logo */
 .logo {
   width: 75px !important;
   height: 75px !important;
@@ -218,56 +220,60 @@ select option {
     transform: rotate(360deg);
   }
 }
-/* Bigger overall scaling */
+
+/* Adjusted Overall Sizing */
+
+/* Normal base font size */
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
-/* Wider layout */
+/* Main container */
 .container {
-  max-width: 1700px !important;
-  padding: 2rem !important;
+  max-width: 1450px !important;
+  padding: 1rem !important;
+  zoom: 1 !important;
 }
 
-/* Bigger cards */
+/* Cards */
 .glass-card {
-  padding: 2.5rem !important;
-  border-radius: 24px !important;
+  padding: 2rem !important;
+  border-radius: 18px !important;
 }
 
-/* Bigger headings */
+/* Headings */
 h1 {
-  font-size: 3.5rem !important;
+  font-size: 3rem !important;
 }
 
 h2 {
-  font-size: 1.8rem !important;
+  font-size: 1.5rem !important;
 }
 
-/* Bigger inputs */
+/* Inputs */
 input,
 select {
-  min-height: 60px !important;
-  font-size: 1.05rem !important;
-  padding: 1rem 1.2rem !important;
+  min-height: 52px !important;
+  font-size: 1rem !important;
+  padding: 1rem 1.1rem !important;
 }
 
-/* Bigger buttons */
+/* Buttons */
 button {
-  min-height: 60px !important;
-  font-size: 1.05rem !important;
-  padding: 0 1.5rem !important;
+  min-height: 52px !important;
+  font-size: 1rem !important;
+  padding: 0 1.2rem !important;
 }
 
-/* Bigger spacing between sections */
+/* Dashboard spacing */
 .dashboard-grid {
-  gap: 2.5rem !important;
+  gap: 2rem !important;
 }
 
-/* Bigger logo */
+/* Logo */
 .logo {
-  width: 85px !important;
-  height: 85px !important;
+  width: 75px !important;
+  height: 75px !important;
 }
 
 /* Better sharpness */
