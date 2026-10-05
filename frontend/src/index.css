@@ -188,7 +188,6 @@ select option {
 
 /* Responsive */
 @media (max-width: 768px) {
-
   #root {
     padding: 1rem;
   }
@@ -221,9 +220,8 @@ select option {
   }
 }
 
-/* Adjusted Overall Sizing */
+/* Overall Sizing */
 
-/* Normal base font size */
 html {
   font-size: 16px;
 }
@@ -250,7 +248,7 @@ h2 {
   font-size: 1.5rem !important;
 }
 
-/* Inputs */
+/* General Inputs */
 input,
 select {
   min-height: 52px !important;
@@ -258,7 +256,7 @@ select {
   padding: 1rem 1.1rem !important;
 }
 
-/* Buttons */
+/* General Buttons */
 button {
   min-height: 52px !important;
   font-size: 1rem !important;
@@ -274,6 +272,16 @@ button {
 .logo {
   width: 75px !important;
   height: 75px !important;
+}
+
+/* Recent Expenses Filter - sizing only */
+.filter-panel input,
+.filter-panel select {
+  min-height: 44px !important;
+}
+
+.filter-panel button {
+  min-height: 42px !important;
 }
 
 /* Better sharpness */
