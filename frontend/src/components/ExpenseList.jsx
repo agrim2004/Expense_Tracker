@@ -134,7 +134,7 @@ function ExpenseList({
               value={startDate}
               onChange={(e) => onStartDateChange(e.target.value)}
               style={{
-                width: '100%',
+                width: '95%',
                 padding: '0.45rem 0.6rem',
                 borderRadius: '6px',
                 background: 'rgba(255, 255, 255, 0.05)',
